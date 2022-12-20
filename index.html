@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Encriptador de Texto</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <img src="assets/logo.svg" alt="logo-alura" />
+    </header>
+
+    <main>
+      <textarea
+        cols="18"
+        rows="5"
+        placeholder="Ingrese el texto aquí"
+        class="texto-encriptar"
+      ></textarea>
+      <p class="advertencia-minus">
+        <img src="assets/warning.svg" class="img-warning"/> Solo letras minúsculas y sin
+        acentos
+      </p>
+
+      <button class="btn-encriptar">Encriptar</button>
+      <button class="btn-desencriptar">Desencriptar</button>
+
+      <section class="card-aviso">
+        <div class="card-aviso__container">
+          <h1>Ningún mensaje fue encontrado</h1>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </section>
+
+      <section class="card-resultado">
+        <div class="card-resultado__container">
+            <p class="resultado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, architecto possimus. Cum eius ducimus quaerat distinctio sed totam repellat, saepe accusantium soluta quod corporis itaque fugiat maxime praesentium necessitatibus laboriosam!</p>
+            <button class="btn-copiar">Copiar</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
 </html>
