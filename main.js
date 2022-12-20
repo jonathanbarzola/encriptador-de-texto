@@ -42,6 +42,14 @@ const keys = {
   u: "ufat",
 };
 
+const reemplazos = {
+  ai: "a",
+  enter: "e",
+  imes: "i",
+  ober: "o",
+  ufat: "u",
+};
+
 const encriptar = (string = "") => {
   const caracteres = string.split("");
   const caracteresReemplazados = caracteres.map((caracter) =>
@@ -52,12 +60,20 @@ const encriptar = (string = "") => {
 };
 
 const desencriptar = (string = "") => {
-  return string
-    .replaceAll("ai", "a")
-    .replaceAll("enter", "e")
-    .replaceAll("imes", "i")
-    .replaceAll("ober", "o")
-    .replaceAll("ufat", "u");
+  /*  
+    - replace(valor-A-Encontrar, valor-A-Reemplazar)
+    - Buscará las coincidencias dentro del string
+    - Si encuentra una coincidencia la función se ejecutará y recibirá cómo argumento el valor encontrado.
+    - La función busca en el "objeto reemplazos" SI existe ENTONCES retorna el valor reemplazado.
+    - e.g gaitober = g-ai-t-ober encontró "ai" y "ober" y los reemplazará por su respectivo valor que sería "a" y "o";
+  */
+
+  /* 
+    Una expresión regular o una cadena que se usa para buscar las ocurrencias que se quieren reemplazar. En este caso, se está pasando una expresión regular que busca cualquiera de las siguientes cadenas: "ai", "enter", "imes", "ober", "ufat". La bandera g (global) indica que se deben buscar todas las ocurrencias, no solo la primera.
+
+    Una función que se invoca por cada ocurrencia encontrada y que devuelve el valor de reemplazo. La función recibe como argumento el valor que se ha encontrado y puede usarlo para calcular el valor de reemplazo.
+  */
+  return string.replace(/ai|enter|imes|ober|ufat/g, (match) => reemplazos[match]);
 };
 
 btnEncriptar.addEventListener("click", () => {
