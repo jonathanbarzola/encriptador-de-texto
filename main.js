@@ -20,9 +20,10 @@ cardResultado.style.display = "none";
 // Si el textarea tiene texto oculta el aviso de ingresar texto.
 textArea.addEventListener("input", () => {
   if (!textArea.value == "" || !textArea.value == null) {
-    cardAviso.style.display = "none";
+    // cardAviso.style.display = "none";
   } else {
     cardAviso.style.display = "block";
+    cardResultado.style.display = "none";
   }
 
   // Convierte todo el texto en minúsculas
@@ -82,6 +83,8 @@ btnEncriptar.addEventListener("click", () => {
   const textoEncriptado = encriptar(textArea.value);
   resultado.textContent = textoEncriptado;
   cardResultado.style.display = "block";
+
+  cardAviso.style.display = "none";
 });
 
 btnDesencriptar.addEventListener("click", () => {
@@ -90,4 +93,6 @@ btnDesencriptar.addEventListener("click", () => {
   const textoDesencriptado = desencriptar(textArea.value);
   resultado.textContent = textoDesencriptado;
   cardResultado.style.display = "block";
+
+  cardAviso.style.display = "none";
 });

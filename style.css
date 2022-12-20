@@ -1,155 +1,251 @@
 :root {
-    --dark-blue-100: #609ED4;
-    --dark-blue-200: #356EA9;
-    --dark-blue-300: #0A3871;
-    --dark-blue-400: #072B61;
-    --dark-blue-500: #052051;
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
 
-    --light-blue-100: #F3F5FC;
-    --light-blue-200: #EFF1FA;
-    --light-blue-300: #E9ECF8;
-    --light-blue-400: #AAB2D5;
-    --light-blue-500: #757FB2;
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
 
-    --gray-100: #CED4DA;
-    --gray-200: #ADB5BD;
-    --gray-300: #878E96;
-    --gray-400: #495057;
-    --gray-500: #343A40;
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #878e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    /* outline: 1px solid red; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  outline: 1px solid red;
 }
 
 body {
-    background-color: var(--light-blue-100);
-    max-width: 100%;
-    height: auto;
-    overflow-x: hidden;
+  background-color: var(--light-blue-100);
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
 
 header {
-    width: 90%;
-    height: 96px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+  width: 90%;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
 main {
-    margin: 10px auto 0;
-    max-width: 90%;
+  margin: 10px auto 0;
+  max-width: 90%;
 }
 
 textarea {
-    all: initial;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: var(--dark-blue-300);
-    font-family: 'Inter', sans-serif;
-    white-space: normal;
-    word-wrap: break-word;
+  all: initial;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--dark-blue-300);
+  font-family: "Inter", sans-serif;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 textarea::placeholder {
-    color: var(--dark-blue-300);
-    font-family: 'Inter', sans-serif;
+  color: var(--dark-blue-300);
+  font-family: "Inter", sans-serif;
 }
 
 .img-warning {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .advertencia-minus {
-    color: var(--gray-400);
-    font-size: 12px;
-    line-height: 18px;
-    display: flex;
-    margin-bottom: 16px;
+  color: var(--gray-400);
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  margin-bottom: 16px;
 }
 
 .btn-encriptar {
-    all: initial;
-    width: 100%;
-    background-color: var(--dark-blue-300);
-    text-align: center;
-    color: #FFF;
-    font-family: 'Inter';
-    padding: 20px 0px;
-    border-radius: 14px;
-    margin-bottom: 24px;
+  width: 100%;
+  background-color: var(--dark-blue-300);
+  text-align: center;
+  color: #fff;
+  font-family: "Inter";
+  padding: 20px 0px;
+  border-radius: 14px;
+  margin-bottom: 24px;
 }
 
 .btn-desencriptar {
-    width: 100%;
-    background-color: var(--light-blue-100);
-    text-align: center;
-    color: var(--dark-blue-300);
-    font-family: 'Inter';
-    padding: 20px 0px;
-    border-radius: 14px;
-    outline: 1px solid var(--dark-blue-300);
-    margin-bottom: 48px;
+  width: 100%;
+  background-color: var(--light-blue-100);
+  text-align: center;
+  color: var(--dark-blue-300);
+  font-family: "Inter";
+  padding: 20px 0px;
+  border-radius: 14px;
+  outline: 1px solid var(--dark-blue-300);
+  margin-bottom: 48px;
 }
 
 button {
-    cursor: pointer;
-    all: initial;
+  all: initial;
+  cursor: pointer;
 }
 
 .card-aviso {
-    border-radius: 28px;
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background-color: #FFF;
+  border-radius: 28px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
 }
 
 .card-aviso__container {
-    text-align: center;
+  text-align: center;
 }
 
 .card-aviso__container h1 {
-    color: var(--gray-500);
-    font-weight: bold;
-    margin-bottom: 16px;
-    font-size: 24px;
-    font-weight: 700;
+  color: var(--gray-500);
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .card-aviso__container p {
-    font-size: 16px;
-    color: var(--gray-400);
+  font-size: 16px;
+  color: var(--gray-400);
 }
 
 .card-resultado {
-    border-radius: 28px;
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background-color: #FFF;
-    font-size: 24px;
-    color: var(--gray-400);
-    line-height: 150%;
+  border-radius: 28px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-size: 24px;
+  color: var(--gray-400);
+  line-height: 150%;
 }
 
 .card-resultado__container p {
-    margin-bottom: 32px;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 32px;
 }
 
 .card-resultado__container button {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  color: var(--dark-blue-300);
+  font-family: "Inter";
+  padding: 20px 0px;
+  border-radius: 14px;
+  outline: 1px solid var(--dark-blue-300);
+}
+
+footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  textarea {
+    height: 440px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .btn-desencriptar {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    place-content: center;
+  }
+
+  header {
+    align-self: start;
+    justify-self: center;
+    margin-left: 40px;
+  }
+
+  main {
+    margin-top: 30px;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+  }
+
+  textarea {
+    height: 100%;
+  }
+
+  footer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  section {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: #FFF;
-    text-align: center;
-    color: var(--dark-blue-300);
-    font-family: 'Inter';
-    padding: 20px 0px;
-    border-radius: 14px;
-    outline: 1px solid var(--dark-blue-300);
+  }
+
+  .card-resultado__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-encriptar:hover {
+    background-color: var(--dark-blue-200);
+    transform: translateY(-3px);
+    transition: 0.3s;
+  }
+
+  .btn-desencriptar:hover {
+    background-color: var(--light-blue-300);
+    transform: translateY(-3px);
+    transition: 0.3s;
+  }
+
+  .image-container {
+    background-image: url(assets/notfounded.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 320px;
+  }
 }

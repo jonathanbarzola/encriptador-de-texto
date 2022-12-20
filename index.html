@@ -13,6 +13,13 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script defer src="https://app.embed.im/snow.js"></script>
+
     <title>Encriptador de Texto</title>
   </head>
   <body>
@@ -28,27 +35,32 @@
         class="texto-encriptar"
       ></textarea>
       <p class="advertencia-minus">
-        <img src="assets/warning.svg" class="img-warning"/> Solo letras minúsculas y sin
-        acentos
+        <img src="assets/warning.svg" class="img-warning" /> Solo letras
+        minúsculas y sin acentos
       </p>
 
-      <button class="btn-encriptar">Encriptar</button>
-      <button class="btn-desencriptar">Desencriptar</button>
+      <div class="buttons">
+        <button class="btn-encriptar">Encriptar</button>
+        <button class="btn-desencriptar">Desencriptar</button>
+      </div>
+    </main>
 
+    <footer>
       <section class="card-aviso">
         <div class="card-aviso__container">
+          <div class="image-container"></div>
           <h1>Ningún mensaje fue encontrado</h1>
           <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
       </section>
 
-      <section class="card-resultado">
+      <section class="card-resultado  animate__animated animate__fadeIn">
         <div class="card-resultado__container">
-            <p class="resultado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, architecto possimus. Cum eius ducimus quaerat distinctio sed totam repellat, saepe accusantium soluta quod corporis itaque fugiat maxime praesentium necessitatibus laboriosam!</p>
-            <button class="btn-copiar">Copiar</button>
+          <p class="resultado">Esperando...</p>
+          <button class="btn-copiar">Copiar</button>
         </div>
       </section>
-    </main>
+    </footer>
 
     <script src="main.js"></script>
   </body>
