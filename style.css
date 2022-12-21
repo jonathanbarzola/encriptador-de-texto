@@ -135,6 +135,9 @@ button {
   font-size: 24px;
   color: var(--gray-400);
   line-height: 150%;
+
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .card-resultado__container p {
@@ -219,6 +222,8 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
   }
 
   .card-resultado__container {
@@ -246,5 +251,69 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     height: 320px;
+  }
+}
+
+#have-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  filter: contrast(1%);
+  width: 150px;
+  position: absolute;
+  opacity: 0;
+  animation: lock 4s ease;
+}
+@keyframes lock {
+  0% {
+    top: 100px;
+  }
+  50% {
+    top: 230px;
+    opacity: 1;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
+}
+
+#toastAlert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.toastAlert {
+  font-weight: bolder;
+  color: #cecece;
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 0 25px 0 #555555;
+  transition: box-shadow 1s ease;
+  transition-delay: 1s;
+}
+
+.activeAnimation {
+  animation: toast 4s ease !important;
+}
+
+@keyframes toast {
+  0% {
+    bottom: 50px;
+    opacity: 0;
+  }
+
+  50% {
+    bottom: 0;
+    opacity: 1;
+    left: 0;
+  }
+  100% {
+    left: -200px;
   }
 }

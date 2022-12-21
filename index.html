@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,6 +36,7 @@
         placeholder="Ingrese el texto aquí"
         class="texto-encriptar"
       ></textarea>
+      <div id="have-animation"></div>
       <p class="advertencia-minus">
         <img src="assets/warning.svg" class="img-warning" /> Solo letras
         minúsculas y sin acentos
@@ -54,7 +57,7 @@
         </div>
       </section>
 
-      <section class="card-resultado  animate__animated animate__fadeIn">
+      <section class="card-resultado animate__animated animate__fadeIn">
         <div class="card-resultado__container">
           <p class="resultado">Esperando...</p>
           <button class="btn-copiar">Copiar</button>
@@ -62,6 +65,8 @@
       </section>
     </footer>
 
+    <div id="toastAlert">
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

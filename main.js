@@ -12,6 +12,8 @@ btnCopiar.addEventListener("click", () => {
   const seleccion = document.getSelection();
   seleccion.selectAllChildren(resultado);
   document.execCommand("copy");
+
+  toast("Texto Copiado ✅", "#385A36");
 });
 
 // Oculta la card donde se muestra el resultado
@@ -74,25 +76,65 @@ const desencriptar = (string = "") => {
 
     Una función que se invoca por cada ocurrencia encontrada y que devuelve el valor de reemplazo. La función recibe como argumento el valor que se ha encontrado y puede usarlo para calcular el valor de reemplazo.
   */
-  return string.replace(/ai|enter|imes|ober|ufat/g, (match) => reemplazos[match]);
+  return string.replace(
+    /ai|enter|imes|ober|ufat/g,
+    (match) => reemplazos[match]
+  );
 };
 
+const haveAnimation = document.querySelector("#have-animation");
+
 btnEncriptar.addEventListener("click", () => {
-  if (textArea.value == "" || textArea.value == null) return;
+  if (textArea.value == "" || textArea.value == null) {
 
-  const textoEncriptado = encriptar(textArea.value);
-  resultado.textContent = textoEncriptado;
-  cardResultado.style.display = "block";
+    toast("Ingresa un texto ❌", "#E71D36")
+  } else {
 
-  cardAviso.style.display = "none";
+    activeAnimation("lock");
+  
+    const textoEncriptado = encriptar(textArea.value);
+    resultado.textContent = textoEncriptado;
+    cardResultado.style.display = "block";
+  
+    cardAviso.style.display = "none";
+    textArea.value = "";
+  }
+
 });
+
+function activeAnimation(lock) {
+  let pushed = `<img src="./assets/${lock}.svg" class="animation" alt="lock-unlock">`;
+  haveAnimation.innerHTML = pushed;
+}
 
 btnDesencriptar.addEventListener("click", () => {
-  if (textArea.value == "" || textArea.value == null) return;
+  if (textArea.value == "" || textArea.value == null) {
 
-  const textoDesencriptado = desencriptar(textArea.value);
-  resultado.textContent = textoDesencriptado;
-  cardResultado.style.display = "block";
+    toast("Ingresa un texto ❌", "#E71D36")
+  } else {
+    
+    activeAnimation("unlock");
+    const textoDesencriptado = desencriptar(textArea.value);
+    resultado.textContent = textoDesencriptado;
+    cardResultado.style.display = "block";
+  
+    cardAviso.style.display = "none";
+    textArea.value = "";
+  }
 
-  cardAviso.style.display = "none";
 });
+
+
+
+const toastAlert = document.querySelector("#toastAlert");
+
+function toast(message, color) {
+  toastAlert.style.opacity = "1";
+  toastAlert.classList.add("activeAnimation");
+  let pushed = `<p class="toastAlert" style="background-color: ${color};">${message}</p>`;
+  toastAlert.innerHTML = pushed;
+  setTimeout(() => {
+    toastAlert.style.opacity = "0";
+    toastAlert.classList.remove("activeAnimation");
+  }, 3000);
+}
